@@ -1,30 +1,33 @@
 package com.qa.main;
 
 public class Q4_ResultsWithFailCount {
-	void showResults(int Physics, int Chemistry, int Biology) {
-		int Total = Physics + Chemistry + Biology;
-		System.out.println("Results: \n" + " Physics:\t" + Physics + "\n Chemistry:\t" + Chemistry  + "\n Biology:\t" + Biology + "\n Total:\t\t" + Total);
-	}
-	void showPercent(double Physics, double Chemistry, double Biology) {
-		double Percent = (Physics + Chemistry + Biology) / 4.5;
-		System.out.println("You scored %" + Percent);
+	void showPercent(double physics, double chemistry, double biology) {
+		double percent = (physics + chemistry + biology) / 4.5;
+		System.out.println("You scored %" + percent);
 		int failCount = 0;
-		if (Percent<60) {
+		if (percent < 60) {
 			System.out.println("You have failed the semester, as your overall score is below 60%.");
 		}
-		if (Physics < 90) {
+		if (physics < 90) {
 			failCount++;
 		}
-		if (Chemistry < 90) {
+		if (chemistry < 90) {
 			failCount++;
 		}
-		if (Biology < 90) {
+		if (biology < 90) {
 			failCount++;
 		}
 		if (failCount > 0) {
-			System.out.println("You have failed the semester, as you have failed in " + failCount + " of your examinations.");
+			System.out.println(
+					"You have failed the semester, as you have failed in " + failCount + " of your examinations.");
 		}
 
 	}
-	
+
+	void showResults(int physics, int chemistry, int biology) {
+		int total = physics + chemistry + biology;
+		System.out.println("Results: \n" + " Physics:\t" + physics + "\n Chemistry:\t" + chemistry + "\n Biology:\t"
+				+ biology + "\n Total:\t\t" + total);
+	}
+
 }
